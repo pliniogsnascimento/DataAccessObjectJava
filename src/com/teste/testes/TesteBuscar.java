@@ -11,7 +11,7 @@ public class TesteBuscar {
 	public static void main(String[] args) {
 		try {
 			UsuarioDAO dao = FactoryDAO.createUsuarioDAO();
-			Usuario usuario = dao.buscar(2);
+			Usuario usuario = (Usuario) dao.buscar(2);
 			
 			System.out.println(usuario.toString());
 		} catch (ClassNotFoundException | SQLException e) {

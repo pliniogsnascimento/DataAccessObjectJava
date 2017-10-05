@@ -20,7 +20,9 @@ public class JDBCUsuarioDAO implements UsuarioDAO{
 	}
 
 	@Override
-	public void inserir(Usuario usuario) {
+	public void inserir(Object object) {
+		Usuario usuario = (Usuario) object;
+		
 		/*
 		String SQL = "INSERT INTO tbUsuario (nome, sobrenome, telefone, email, login, senha, fraseRec, pais, estado, cidade, "
 				+ "rua, bairro, num, cep)"
@@ -83,8 +85,8 @@ public class JDBCUsuarioDAO implements UsuarioDAO{
 	}
 
 	@Override
-	public List<Usuario> listar() {
-		List<Usuario> usuarios = new ArrayList<Usuario>();
+	public List<Object> listar() {
+		List<Object> usuarios = new ArrayList<Object>();
 		String SQL = "SELECT * FROM tbUsuario";
 		
 		try {
@@ -171,7 +173,8 @@ public class JDBCUsuarioDAO implements UsuarioDAO{
 	}
 
 	@Override
-	public void editar(Usuario usuario) {
+	public void editar(Object object) {
+		Usuario usuario = (Usuario) object;
 		String SQL = "UPDATE tbUsuario SET nome=?, sobrenome=? WHERE id=?";
 		
 		try {

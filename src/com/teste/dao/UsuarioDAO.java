@@ -5,9 +5,9 @@ import java.util.List;
 import com.teste.model.Usuario;
 
 public interface UsuarioDAO {
-	public void inserir(Usuario usuario);
+	public void inserir(Object object);
 	public void remover(int id);
-	public List<Usuario> listar();
-	public Usuario buscar(int id);
-	public void editar(Usuario usuario);
+	public List<Object> listar();
+	public Object buscar(int id);
+	public void editar(Object object);
 }

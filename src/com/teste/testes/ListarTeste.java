@@ -10,10 +10,11 @@ public class ListarTeste {
 	public static void main(String[] args) {
 		try {
 			UsuarioDAO pd = FactoryDAO.createUsuarioDAO();
-			List<Usuario> lista = pd.listar(); 
+			List<Object> lista = pd.listar(); 
 			
-			for(Usuario usuario:lista) {
-				System.out.println(usuario);
+			for(Object object:lista) {
+				Usuario usuario = (Usuario) object;
+				System.out.println(usuario.toString());
 			}
 		} catch(Exception ex) {
 			ex.printStackTrace();

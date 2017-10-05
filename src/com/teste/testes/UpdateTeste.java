@@ -14,8 +14,8 @@ public class UpdateTeste {
 			Usuario usuario = new Usuario();
 			
 			usuario.setId(2);
-			usuario.setNome("Ana Carolina");
-			usuario.setSobrenome("Gomes do Nascimento");
+			usuario.setNome("José");
+			usuario.setSobrenome("Silva");
 			
 			dao.editar(usuario);
 			
